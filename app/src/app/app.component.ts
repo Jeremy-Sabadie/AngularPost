@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ListComponent } from './list/list.component'; // Assure-toi du chemin correct
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  templateUrl: './app.component.html', // Template externe
+  imports: [ListComponent, RouterModule], // Fusion des imports
 })
 export class AppComponent {
   title = 'app';
